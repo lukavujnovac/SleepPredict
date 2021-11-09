@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F097BA8273AED8C00950E85 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F097BA7273AED8C00950E85 /* WelcomeView.swift */; };
+		5F097BAA273AF16800950E85 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F097BA9273AF16800950E85 /* LogInView.swift */; };
 		5F55786A271A16AF00775609 /* SleepPredictApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F557869271A16AF00775609 /* SleepPredictApp.swift */; };
 		5F55786C271A16AF00775609 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F55786B271A16AF00775609 /* SleepView.swift */; };
 		5F55786E271A16B100775609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F55786D271A16B100775609 /* Assets.xcassets */; };
 		5F557871271A16B100775609 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F557870271A16B100775609 /* Preview Assets.xcassets */; };
-		5F5C225C272C6F3F00C3EA20 /* MeditaionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C225B272C6F3F00C3EA20 /* MeditaionScreen.swift */; };
+		5F5C225C272C6F3F00C3EA20 /* MeditaionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C225B272C6F3F00C3EA20 /* MeditaionView.swift */; };
 		5F9AB04A2733C9DA00596C81 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9AB0492733C9DA00596C81 /* Home.swift */; };
 		5F9AB04C2733DA6700596C81 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9AB04B2733DA6700596C81 /* BackgroundView.swift */; };
 		5FFA640F272335110079755F /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FFA640E272335110079755F /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F097BA7273AED8C00950E85 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		5F097BA9273AF16800950E85 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		5F557866271A16AF00775609 /* SleepPredict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepPredict.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F557869271A16AF00775609 /* SleepPredictApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepPredictApp.swift; sourceTree = "<group>"; };
 		5F55786B271A16AF00775609 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
 		5F55786D271A16B100775609 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F557870271A16B100775609 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5F5C225B272C6F3F00C3EA20 /* MeditaionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditaionScreen.swift; sourceTree = "<group>"; };
+		5F5C225B272C6F3F00C3EA20 /* MeditaionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditaionView.swift; sourceTree = "<group>"; };
 		5F9AB0492733C9DA00596C81 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		5F9AB04B2733DA6700596C81 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		5FFA640E272335110079755F /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
@@ -43,6 +47,10 @@
 		5F55785D271A16AF00775609 = {
 			isa = PBXGroup;
 			children = (
+				5F557869271A16AF00775609 /* SleepPredictApp.swift */,
+				5F9AB0492733C9DA00596C81 /* Home.swift */,
+				5F5C225B272C6F3F00C3EA20 /* MeditaionView.swift */,
+				5F55786B271A16AF00775609 /* SleepView.swift */,
 				5F557868271A16AF00775609 /* SleepPredict */,
 				5F557867271A16AF00775609 /* Products */,
 			);
@@ -59,11 +67,9 @@
 		5F557868271A16AF00775609 /* SleepPredict */ = {
 			isa = PBXGroup;
 			children = (
-				5F9AB0492733C9DA00596C81 /* Home.swift */,
+				5F097BA7273AED8C00950E85 /* WelcomeView.swift */,
+				5F097BA9273AF16800950E85 /* LogInView.swift */,
 				5F9AB04B2733DA6700596C81 /* BackgroundView.swift */,
-				5F5C225B272C6F3F00C3EA20 /* MeditaionScreen.swift */,
-				5F557869271A16AF00775609 /* SleepPredictApp.swift */,
-				5F55786B271A16AF00775609 /* SleepView.swift */,
 				5F55786D271A16B100775609 /* Assets.xcassets */,
 				5FFA640E272335110079755F /* SleepCalculator.mlmodel */,
 				5F55786F271A16B100775609 /* Preview Content */,
@@ -153,8 +159,10 @@
 				5F55786C271A16AF00775609 /* SleepView.swift in Sources */,
 				5F55786A271A16AF00775609 /* SleepPredictApp.swift in Sources */,
 				5F9AB04A2733C9DA00596C81 /* Home.swift in Sources */,
-				5F5C225C272C6F3F00C3EA20 /* MeditaionScreen.swift in Sources */,
+				5F5C225C272C6F3F00C3EA20 /* MeditaionView.swift in Sources */,
 				5FFA640F272335110079755F /* SleepCalculator.mlmodel in Sources */,
+				5F097BAA273AF16800950E85 /* LogInView.swift in Sources */,
+				5F097BA8273AED8C00950E85 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

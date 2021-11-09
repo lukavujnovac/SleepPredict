@@ -11,7 +11,7 @@ import SwiftUI
 struct SleepPredictApp: App {
     var body: some Scene {
         WindowGroup {
-            MeditaionScreen()
+            LogInView()
         }
     }
 }

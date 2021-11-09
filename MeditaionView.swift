@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MeditaionScreen: View {
+struct MeditationView: View {
     
     @State private var waterAmount: Float = 0
     @State private var showingAlert: Bool = false
@@ -99,7 +99,7 @@ struct MeditaionScreen: View {
 
 struct MeditationScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MeditaionScreen()
+        MeditationView()
     }
 }
 
