@@ -15,7 +15,7 @@ struct MeditationView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                BackgroundView()
+//                BackgroundView()
                 
                 VStack(spacing: 20){
                     personView.overlay(overlayView.mask(personView))

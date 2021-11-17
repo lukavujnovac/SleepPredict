@@ -15,7 +15,9 @@ struct Home: View {
     
     var body: some View {
         ZStack {
-            BackgroundView()
+            Rectangle()
+                .foregroundColor(.black)
+                .ignoresSafeArea()
             VStack{
                 Image(systemName: "moon.zzz")
                     .resizable()
