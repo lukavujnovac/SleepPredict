@@ -63,6 +63,7 @@
 				5F097BA7273AED8C00950E85 /* WelcomeView.swift */,
 				5F4ED9FB2745638000EE381A /* LogInView.swift */,
 				5F4EDA0127457E0E00EE381A /* SignUpView.swift */,
+				5F9AB0492733C9DA00596C81 /* Home.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -72,7 +73,6 @@
 			children = (
 				5F557869271A16AF00775609 /* SleepPredictApp.swift */,
 				5F5C225B272C6F3F00C3EA20 /* MeditaionView.swift */,
-				5F9AB0492733C9DA00596C81 /* Home.swift */,
 				5F55786B271A16AF00775609 /* SleepView.swift */,
 				5F557868271A16AF00775609 /* SleepPredict */,
 				5F557867271A16AF00775609 /* Products */,

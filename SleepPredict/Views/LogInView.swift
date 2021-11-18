@@ -26,7 +26,6 @@ struct LogInView: View {
                             .font(Font.system(size: 30))
                             .fontWeight(.semibold)
                 }.padding(.top, 50)
-                
                 VStack(spacing: 15){
                     
                     VStack(alignment: .leading, spacing: 5) {

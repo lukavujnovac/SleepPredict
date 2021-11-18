@@ -31,32 +31,54 @@ struct SignUpView: View {
                 }.padding(.top, 50)
                 
                 VStack(spacing: 15){
-                    TextField("Email", text: $vm.username)
-                        .frame(width: 250 ,height: 55)
-                        .padding(.horizontal, 50)
-                        .background(Color("textFieldColor"))
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Email:")
+                            .foregroundColor(Color("textFieldColor"))
+                            .fontWeight(.medium)
+                            .padding(.leading, 20)
+                            
+                        TextField("", text: $vm.username)
+                            .frame(width: 250 ,height: 55)
+                            .padding(.horizontal, 50)
+                            .background(Color("textFieldColor"))
                         .cornerRadius(20)
+                    }
                     
-                    SecureField("Password", text: $vm.password1)
-                        .frame(width: 250 ,height: 55)
-                        .padding(.horizontal, 50)
-                        .background(Color("textFieldColor"))
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Password:")
+                            .foregroundColor(Color("textFieldColor"))
+                            .fontWeight(.medium)
+                            .padding(.leading, 20)
+                        
+                        SecureField("", text: $vm.password1)
+                            .frame(width: 250 ,height: 55)
+                            .padding(.horizontal, 50)
+                            .background(Color("textFieldColor"))
                         .cornerRadius(20)
+                    }
                     
                     VStack(alignment: .leading) {
                         
-                        if !passwordsMatching {
-                            Text("Passwords not matching")
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("Confirm password:")
+                                .foregroundColor(Color("textFieldColor"))
                                 .fontWeight(.medium)
                                 .padding(.leading, 20)
-                                .foregroundColor(Color("errorColor"))
+                            
+                            if !passwordsMatching {
+                                Text("Passwords not matching")
+                                    .fontWeight(.medium)
+                                    .padding(.leading, 20)
+                                    .foregroundColor(Color("errorColor"))
+                            }
+                            
+                            SecureField("", text: $vm.password2)
+                                .frame(width: 250 ,height: 55)
+                                .padding(.horizontal, 50)
+                                .background(
+                                    passwordsMatching ? Color("textFieldColor") : Color("errorColor"))
+                            .cornerRadius(20)
                         }
-                        SecureField("Confirm password", text: $vm.password2)
-                            .frame(width: 250 ,height: 55)
-                            .padding(.horizontal, 50)
-                            .background(
-                                passwordsMatching ? Color("textFieldColor") : Color("errorColor"))
-                        .cornerRadius(20)
                     }
                 }
                 StandardButton(
