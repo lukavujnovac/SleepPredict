@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-struct WelcomeView: View {
-    
-    @State private var showingLogInView: Bool = false
-    @State private var showingSignUpView: Bool = false
-    
+struct WelcomeView: View {    
     var body: some View {
         NavigationView{
             ZStack{
@@ -37,28 +33,26 @@ struct WelcomeView: View {
                     Spacer()
                     
                     VStack(spacing: 25){
-                        StandardButton(
-                            text: "Sign Up",
-                            textColor: Color("darkPurple"),
-                            foregroundColor: .white)
-                            .onTapGesture {
-                                showingSignUpView.toggle()
-                            }
                         
-                        StandardButton(
-                            text: "Log In",
-                            textColor: .white,
-                            foregroundColor: Color("darkPurple"))
-                            .onTapGesture {
-                                showingLogInView.toggle()
-                            }
+                        NavigationLink { 
+                            SignUpView()
+                        } label: { 
+                            StandardButton(
+                                text: "Sign Up",
+                                textColor: Color("darkPurple"),
+                                foregroundColor: .white)
+                        }
+
+                        NavigationLink { 
+                            LogInView()
+                        } label: { 
+                            StandardButton(
+                                text: "Log In",
+                                textColor: .white,
+                                foregroundColor: Color("darkPurple"))
+                        }
                     }
-                }.sheet(isPresented: $showingLogInView) { 
-                    LogInView()
                 }
-                .sheet(isPresented: $showingSignUpView, content: { 
-                    SignUpView()
-                })
             }
         }
     }

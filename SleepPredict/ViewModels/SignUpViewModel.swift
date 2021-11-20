@@ -19,6 +19,8 @@ class SignUpViewModel: ObservableObject{
     @Published var password2: String = ""
     @Published var password2IsValid: Bool = false
     
+    @Published var password: String = ""
+    
     @Published var showButton: Bool = false
     
     @Published var passwordsMatching: Bool = false
@@ -76,6 +78,7 @@ class SignUpViewModel: ObservableObject{
     func checkPasswordsMatching() -> Bool {
         if password1 == password2 {
                 passwordsMatching = true  
+                password = password1
         }else {
                 passwordsMatching = false
         }

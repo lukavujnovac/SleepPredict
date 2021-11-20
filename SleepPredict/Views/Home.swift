@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     
+    @EnvironmentObject var vm: AuthViewModel
     @State private var goalCompleted: Bool = false
     
     var body: some View {
@@ -17,7 +18,16 @@ struct Home: View {
                 .foregroundColor(.black)
                 .ignoresSafeArea()
             
-            VStack(spacing: 30){
+            VStack(spacing: 25){
+                
+                Button {
+                    vm.signOut()
+                } label: { 
+                    Text("Sign out")
+                        .foregroundColor(.red)
+                }
+
+                
                 CardTabView(
                     text: "Sleep"
                     , color1: Color("darkPurple")

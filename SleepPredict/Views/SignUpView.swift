@@ -10,7 +10,11 @@ import Combine
 
 struct SignUpView: View {
     
+    @State var email: String = ""
+    @State var password: String = ""
+    
     @StateObject private var vm = SignUpViewModel()
+    @EnvironmentObject var authVM: AuthViewModel
     
     @State private var passwordsMatching: Bool = true
     
@@ -37,7 +41,9 @@ struct SignUpView: View {
                             .fontWeight(.medium)
                             .padding(.leading, 20)
                             
-                        TextField("", text: $vm.username)
+                        TextField("", text: $email)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
                             .frame(width: 250 ,height: 55)
                             .padding(.horizontal, 50)
                             .background(Color("textFieldColor"))
@@ -50,57 +56,64 @@ struct SignUpView: View {
                             .fontWeight(.medium)
                             .padding(.leading, 20)
                         
-                        SecureField("", text: $vm.password1)
+                        SecureField("", text: $password)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
                             .frame(width: 250 ,height: 55)
                             .padding(.horizontal, 50)
                             .background(Color("textFieldColor"))
                         .cornerRadius(20)
                     }
                     
-                    VStack(alignment: .leading) {
-                        
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Confirm password:")
-                                .foregroundColor(Color("textFieldColor"))
-                                .fontWeight(.medium)
-                                .padding(.leading, 20)
-                            
-                            if !passwordsMatching {
-                                Text("Passwords not matching")
-                                    .fontWeight(.medium)
-                                    .padding(.leading, 20)
-                                    .foregroundColor(Color("errorColor"))
-                            }
-                            
-                            SecureField("", text: $vm.password2)
-                                .frame(width: 250 ,height: 55)
-                                .padding(.horizontal, 50)
-                                .background(
-                                    passwordsMatching ? Color("textFieldColor") : Color("errorColor"))
-                            .cornerRadius(20)
-                        }
-                    }
+//                    VStack(alignment: .leading) {
+//                        
+//                        VStack(alignment: .leading, spacing: 5) {
+//                            Text("Confirm password:")
+//                                .foregroundColor(Color("textFieldColor"))
+//                                .fontWeight(.medium)
+//                                .padding(.leading, 20)
+//                            
+//                            if !passwordsMatching {
+//                                Text("Passwords not matching")
+//                                    .fontWeight(.medium)
+//                                    .padding(.leading, 20)
+//                                    .foregroundColor(Color("errorColor"))
+//                            }
+//                            
+//                            SecureField("", text: $vm.password2)
+//                                .frame(width: 250 ,height: 55)
+//                                .padding(.horizontal, 50)
+//                                .background(
+//                                    passwordsMatching ? Color("textFieldColor") : Color("errorColor"))
+//                            .cornerRadius(20)
+//                        }
+//                    }
                 }
-                StandardButton(
-                    text: "Sign Up",
-                    textColor: Color("darkPurple"),
-                    foregroundColor: .white)
-                    .onTapGesture {
-                        if vm.checkPasswordsMatching() {
-                            withAnimation(.default) {
-                                passwordsMatching = true
-                            } 
-                        }else {
-                            withAnimation(.default) {
-                                passwordsMatching = false
-                            }
-                        }
-                    }
+                Button { 
+                    authVM.signUp(email: email, password: password)
+                } label: { 
+                    StandardButton(
+                        text: "Sign Up",
+                        textColor: Color("darkPurple"),
+                        foregroundColor: .white)
+                } 
             }
         }
     }
 }
 
+
+//    .onTapGesture {
+//        if vm.checkPasswordsMatching() {
+//            withAnimation(.default) {
+//                passwordsMatching = true
+//            } 
+//        }else {
+//            withAnimation(.default) {
+//                passwordsMatching = false
+//            }
+//        }
+//    }
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
