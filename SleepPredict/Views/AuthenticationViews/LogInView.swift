@@ -79,7 +79,6 @@ struct LogInView: View {
                 Spacer()
             }
         }
-        
     }
 }
 

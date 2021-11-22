@@ -13,9 +13,9 @@ struct ContentView: View {
         NavigationView{
             if vm.signedIn {
                 Home()
-                    .navigationBarHidden(true)
+//                    .navigationBarHidden(true)
             } else {
-                LogInView()
+                WelcomeView()
             }
         }.onAppear{
             vm.signedIn = vm.isSignedIn

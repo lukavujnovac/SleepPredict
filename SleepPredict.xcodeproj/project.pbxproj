@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F06A58C274C365C008336FD /* HydrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F06A58B274C365C008336FD /* HydrationView.swift */; };
 		5F097BA8273AED8C00950E85 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F097BA7273AED8C00950E85 /* WelcomeView.swift */; };
+		5F2F04102749995800CFBD39 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F040F2749995800CFBD39 /* SettingsView.swift */; };
 		5F4ED9FC2745638000EE381A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED9FB2745638000EE381A /* LogInView.swift */; };
 		5F4ED9FE27457B2000EE381A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED9FD27457B2000EE381A /* LoginViewModel.swift */; };
 		5F4EDA0227457E0E00EE381A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4EDA0127457E0E00EE381A /* SignUpView.swift */; };
@@ -28,7 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F06A58B274C365C008336FD /* HydrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationView.swift; sourceTree = "<group>"; };
 		5F097BA7273AED8C00950E85 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		5F2F040F2749995800CFBD39 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5F4ED9FB2745638000EE381A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		5F4ED9FD27457B2000EE381A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5F4EDA0127457E0E00EE381A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -60,12 +64,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F4ED9FF27457B7400EE381A /* ViewModels */ = {
+		5F2F04112749A10D00CFBD39 /* AuthenticationViews */ = {
+			isa = PBXGroup;
+			children = (
+				5F097BA7273AED8C00950E85 /* WelcomeView.swift */,
+				5F4ED9FB2745638000EE381A /* LogInView.swift */,
+				5F4EDA0127457E0E00EE381A /* SignUpView.swift */,
+			);
+			path = AuthenticationViews;
+			sourceTree = "<group>";
+		};
+		5F2F04122749A12600CFBD39 /* AuthenticationViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				5F4ED9FD27457B2000EE381A /* LoginViewModel.swift */,
 				5F4EDA03274587C000EE381A /* SignUpViewModel.swift */,
 				5F6DE14E274979E7008D9DD7 /* AuthViewModel.swift */,
+			);
+			path = AuthenticationViewModels;
+			sourceTree = "<group>";
+		};
+		5F4ED9FF27457B7400EE381A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5F2F04122749A12600CFBD39 /* AuthenticationViewModels */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -75,9 +97,9 @@
 			children = (
 				5F6DE15227497CA0008D9DD7 /* ContentView.swift */,
 				5F9AB0492733C9DA00596C81 /* Home.swift */,
-				5F097BA7273AED8C00950E85 /* WelcomeView.swift */,
-				5F4ED9FB2745638000EE381A /* LogInView.swift */,
-				5F4EDA0127457E0E00EE381A /* SignUpView.swift */,
+				5F06A58B274C365C008336FD /* HydrationView.swift */,
+				5F2F040F2749995800CFBD39 /* SettingsView.swift */,
+				5F2F04112749A10D00CFBD39 /* AuthenticationViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,9 +232,11 @@
 				5FFA640F272335110079755F /* SleepCalculator.mlmodel in Sources */,
 				5F4ED9FE27457B2000EE381A /* LoginViewModel.swift in Sources */,
 				5F6DE14F274979E7008D9DD7 /* AuthViewModel.swift in Sources */,
+				5F06A58C274C365C008336FD /* HydrationView.swift in Sources */,
 				5F4ED9FC2745638000EE381A /* LogInView.swift in Sources */,
 				5F4EDA0227457E0E00EE381A /* SignUpView.swift in Sources */,
 				5F097BA8273AED8C00950E85 /* WelcomeView.swift in Sources */,
+				5F2F04102749995800CFBD39 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

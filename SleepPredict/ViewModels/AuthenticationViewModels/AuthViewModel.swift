@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import SwiftUI
 
 class AuthViewModel: ObservableObject {
     
@@ -25,7 +26,7 @@ class AuthViewModel: ObservableObject {
             guard result != nil, error == nil else {return}
             //success
             DispatchQueue.main.async {
-                self.signedIn = true
+                    self.signedIn = true
             }
         }
     }
@@ -37,7 +38,7 @@ class AuthViewModel: ObservableObject {
             guard result != nil, error == nil else {return}
             //success
             DispatchQueue.main.async {
-                self.signedIn = true
+                    self.signedIn = true
             }
         }
     }
@@ -45,6 +46,8 @@ class AuthViewModel: ObservableObject {
     func signOut() {
         try? auth.signOut()
         
-        self.signedIn = false
+        withAnimation(.default) {
+            self.signedIn = false
+        }
     }
 }
