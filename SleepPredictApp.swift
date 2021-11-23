@@ -25,7 +25,7 @@ struct SleepPredictApp: App {
     var body: some Scene {
         WindowGroup {
             let viewModel = AuthViewModel()
-            ContentView()
+            HydrationView()
                 .environmentObject(viewModel)
         }
     }

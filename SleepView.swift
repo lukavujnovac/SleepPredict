@@ -128,8 +128,8 @@ struct SleepView: View {
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SleepView()
-//    }
-//}
+struct SleepView_Previews: PreviewProvider {
+    static var previews: some View {
+        SleepView()
+    }
+}
